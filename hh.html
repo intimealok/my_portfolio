@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Website | Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enables dark mode with 'dark' class
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="w-full bg-white dark:bg-gray-800 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold">My Website</h1>
+            <button onclick="toggleDarkMode()" 
+                class="px-4 py-2 bg-gray-800 text-white rounded-lg dark:bg-gray-200 dark:text-black transition-all duration-300">
+                Toggle Dark Mode 🌙
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="flex flex-col items-center justify-center h-screen text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to My Website</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+            Experience light and dark mode with Tailwind CSS.
+        </p>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                    <h3 class="text-xl font-semibold">🚀 Fast</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Optimized for performance.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                    <h3 class="text-xl font-semibold">🌙 Dark Mode</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Toggle between light and dark mode.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                    <h3 class="text-xl font-semibold">💡 Easy to Use</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Built with simplicity in mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white dark:bg-gray-800 text-center py-4">
+        <p class="text-gray-600 dark:text-gray-400">© 2025 My Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Keep dark mode preference on page reload
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+</body>
+</html>

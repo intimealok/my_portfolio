@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+
+
+
+/* ROOT VARIABLES */
+:root{
+    --light-color:#F5F4D9;
+    --alight-color:#f5f4f1;
+    --blight-color:#f1f4f8;
+    --dark-color:#1c1f3b;
+    --adark-color:#282c4d;
+    --main-color:#0F141E;
+}
+
+*{
+    font-family: "Afacad Flux", serif;
+}
+
+h1{
+    font-family: "Quicksand", serif;
+}
+
+
+
+/* CUSTOM CSS */
+.container-full{
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive CSS */
+@media (max-width:769px) {
+    .container-full{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .container-head{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

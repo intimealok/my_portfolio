@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[var(--blight-color)] scroll-smooth">
+    <header class="z-50 w-full fixed top-0 left-0 bg-black dark:bg-white py-3">
+        <nav class="container-full flex justify-between items-center px-4">
+            <button id="showMenu" onclick="showMenu()"
+                class="block md:hidden text-2xl text-white dark:text-black cursor-pointer"> <i
+                    class="fa-solid fa-house"></i></button>
+            <div id="header-logo" class="block md:flex items-center">
+                <img src="/images/logo.jpg" alt="" class="w-12 h-12 rounded-full">
+                <h1 class="hidden md:block ms-2 font-extrabold text-3xl dark:text-black text-white">Alok B.</h1>
+            </div>
+            <ul class="hidden md:flex gap-7 text-xl tracking-wide text-white dark:text-black">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button onclick="toggleDark()" class="w-12 bg-white dark:bg-black h-8 text-orange-400 rounded-full"><i
+                    class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            <!-- ---resposive menu-- -->
+
+        </nav>
+        <div id="responMenu"
+            class="absolute md:hidden hidden transition duration-300 ease-in-out top-0 left-0 w-full h-screen bg-black dark:bg-white text-3xl text-center py-10 text-white dark:text-black"
+            >
+            <i id="closeMenu" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
+            <ul class="flex flex-col gap-7 py-10 text-3xl tracking-wide text-[var(--light-color)] dark:text-black">
+                <li><a class="menu-item" href="#">Home</a></li>
+                <li><a class="menu-item" href="#about">About</a></li>
+                <li><a class="menu-item" href="#services">Services</a></li>
+                <li><a class="menu-item" href="#testimonials">Testimonials</a></li>
+                <li><a class="menu-item" href="#contact">Contact</a></li>
+            </ul>
+            <span class="text-2xl py-10">Call Me: 0123456789 <br> Email Me: hello@intimealok.com</span>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+        class=" w-full h-screen bg-gradient-to-tl from-black to-slate-900 dark:from-[var(--alight-color)] dark:to-[var(--blight-color)]">
+        <div class="container-full flex items-center justify-center md:justify-between relative top-[60%] -translate-y-[60%]">
+            <div id="right" class="hidden md:block">
+                <img src="/images/hero.png" alt="" class="w-[500px]">
+            </div>
+            <div id="left" class="text-white dark:text-black flex flex-col justify-center items-center md:items-baseline">
+                <p
+                    class="flex flex-col md:flex-row items-center gap-5 text-xl md:text-2xl text-[var(--light-color)] dark:text-[var(--dark-color)] ">
+                    <i class="fa-solid fa-award text-4xl"></i> Award winning Web Developer
+                </p>
+                <h1 class="text-4xl my-3 md:my-0 md:text-8xl font-extrabold">Hi, I'm Alok</h1>
+                <p class="text-xl my-5"> Web Developer & Graphics Designer</p>
+                <div class="flex flex-col md:flex-row items-center gap-3 md:gap-10">
+                    <button
+                        class="bg-[var(--light-color)] dark:bg-[var(--dark-color)] px-6 py-2 text-black dark:text-white rounded-tr-2xl rounded-bl-2xl text-xl">View
+                        Resume</button>
+                    <span class="text-xl flex gap-2 items-center"><i class="fa-regular fa-envelope"></i>
+                        hello@intimealok.com</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT ME  -->
+    <section class="w-full min-h-screen bg-black dark:bg-[var(--alight-color)]">
+        <div class="container-full">
+            <div id="about" class="py-10">
+                <h1
+                    class="text-4xl font-bold text-[var(--light-color)] dark:text-[var(--dark-color)] text-center md:text-left">
+                    About Me</h1>
+            </div>
+            <div id="row" class="flex flex-col md:flex-row gap-5 mb-10">
+                <div id="img"
+                    class="basis-1/3 bg-[var(--main-color)] dark:bg-white p-5 rounded-lg flex items-center justify-center">
+                    <img src="/images/alok.jpg" alt="Alok Biswas" class="w-[250px] rounded-b-full rounded-t-2xl">
+                </div>
+                <div id="about-info"
+                    class="basis-2/3 bg-[var(--main-color)] p-5 md:p-10 rounded-lg text-white dark:bg-white  dark:text-black ">
+                    <h1 class="text-4xl md:text-6xl font-bold my-6 text-[var(--light-color)] dark:text-black">Hi, I'm
+                        Alok Biswas
+                    </h1>
+                    <p class="text-2xl mr-30">
+                        I am Alok, a Web Developer & Facebook Ads Expert. I create user-friendly, functional, and
+                        responsible websites as a web developer. I am also a Facebook marketing expert to help you grow
+                        your brand with targeted ad campaigns that engage the right audience. <br> <br>
+                        Let’s work together to raise your online presence and drive results!
+                    </p>
+                </div>
+            </div>
+            <div id="row" class="flex flex-col md:flex-row gap-5 mb-10">
+                <div id="col"
+                    class="basis-1/2 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-3 md:p-10 rounded-lg text-white dark:text-black ">
+                    <h1 class="text-4xl font-bold my-6 text-[var(--light-color)] dark:text-black">Experience</h1>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)] ">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                Founder of <span
+                                    class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]">IntimeWebs</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                Jan 2015 > Present</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)]">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                Web Developer at <span
+                                    class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]">Blitz
+                                    WebDesign</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                Jul 2022 > Dec 2022</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)]">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                Designer & Developer at <span
+                                    class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]"> Andaman
+                                    Orient Holidays</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                Apr 2021 > Present</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="col"
+                    class="basis-1/2 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-3 md:p-10 rounded-lg text-white dark:text-black ">
+                    <h1 class="text-4xl font-bold my-6 text-[var(--light-color)] dark:text-black">Education</h1>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)]">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                MSc in <span
+                                    class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]">Mathematics</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                Completed at 2020-2021</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)]">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                BSc in <span
+                                    class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]">Mathematics</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                Completed 2016-2019</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div id="com-icon" class="bg-black rounded-2xl p-5 text-4xl dark:bg-[var(--blight-color)]">
+                            <i class="fa-brands fa-shoelace"></i>
+                        </div>
+                        <div id="com-info" class="py-2 text-2xl">
+                            <h1>
+                                <span class="font-bold text-[var(--light-color)] dark:text-[var(--adark-color)]">ICT
+                                    Course</span>
+                            </h1>
+                            <span
+                                class="rounded-full border border-white/30 dark:border-black/30 dark:text-black px-3 text-sm text-white/50 mt-1">
+                                1 year course at 2020</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="row" class="flex flex-col md:flex-row gap-5 py-10">
+                <div id="col"
+                    class="basis-2/3 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black ">
+                    <h1 class="text-4xl font-bold my-8 text-[var(--light-color)] text-center md:text-left dark:text-black">Skills</h1>
+                    <div class="flex flex-row flex-wrap justify-between gap-y-4">
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-[200px] md:text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/adobe-illustrator-svgrepo-com.svg" alt=""
+                                class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">80%</p>
+                            <p class="text-lg text-white dark:text-black">Illustrator</p>
+                        </div>
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/css-3-svgrepo-com.svg" alt="" class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">70%</p>
+                            <p class="text-lg text-white dark:text-black">CSS</p>
+                        </div>
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/figma-svgrepo-com.svg" alt="" class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">70%</p>
+                            <p class="text-lg text-white dark:text-black">Figma</p>
+                        </div>
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/html-5-svgrepo-com.svg" alt="" class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">90%</p>
+                            <p class="text-lg text-white dark:text-black">HTML</p>
+                        </div>
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/php-svgrepo-com.svg" alt="" class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">60%</p>
+                            <p class="text-lg text-white dark:text-black">PHP</p>
+                        </div>
+                        <div id="com-icon"
+                            class="flex flex-col justify-center items-center bg-black rounded-xl p-4 text-4xl dark:bg-[var(--blight-color)]">
+                            <img src="/logo/gitlab-svgrepo-com.svg" alt="" class="w-[80px] h-[80px] md:w-12 md:h-12">
+                            <p class="text-sm text-white/50 dark:text-black/50">80%</p>
+                            <p class="text-lg text-white dark:text-black">GitLab</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="col" class="flex flex-col basis-1/3 gap-5">
+                    <div
+                        class="flex flex-col gap-2 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black">
+                        <h1 class="text-4xl font-bold  text-[var(--light-color)] dark:text-black">9+</h1>
+                        <h1 class="text-xl text-[var(--light-color)] dark:text-black">years of experience</h1>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black">
+                        <h1 class="text-4xl font-bold text-[var(--light-color)] dark:text-black">60+</h1>
+                        <h1 class="text-xl text-[var(--light-color)] dark:text-black">project completed</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES SECTION -->
+    <section class="w-full min-h-screen bg-black dark:bg-[var(--alight-color)]">
+        <div class="container-full">
+            <div id="services" class="py-10">
+                <h1
+                    class="text-4xl text-center md:text-left font-bold text-[var(--light-color)] dark:text-[var(--dark-color)]">
+                    Services</h1>
+            </div>
+            <div id="row" class="flex flex-col md:flex-row gap-5 my-10">
+                <div id="col"
+                    class="group basis-2/3 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black ">
+                    <div class="flex justify-between"><span
+                            class=" border w-8 h-8 flex items-center justify-center rounded-full">01</span> <span
+                            class="transition ease-in-out duration-150 text-3xl group-hover:-rotate-45 group-hover:text-orange-400"><i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <h1 class="font-bold my-3 text-4xl text-[var(--light-color)] dark:text-[var(--adark-color)]">Digital
+                        Marketing</h1>
+                    <p class="text-xl text-white dark:text-[var(--dark-color)] mr-[50px]">Boost your online presence
+                        with targeted SEO, social media marketing, and paid ads to drive traffic and conversions.</p>
+                </div>
+                <div id="col"
+                    class="group basis-1/3 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black ">
+                    <div class="flex justify-between"><span
+                            class=" border w-8 h-8 flex items-center justify-center rounded-full">02</span> <span
+                            class="transition ease-in-out duration-150 text-3xl group-hover:-rotate-45 group-hover:text-orange-400"><i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <h1 class="font-bold my-3 text-4xl text-[var(--light-color)] dark:text-[var(--adark-color)]">
+                        Graphics Design</h1>
+                    <p class="text-xl text-white dark:text-[var(--dark-color)]">Create eye-catching logos, banners, and
+                        branding materials that make a lasting impact.</p>
+                </div>
+            </div>
+            <div id="row" class="flex flex-col md:flex-row gap-5 ">
+                <div id="col"
+                    class="group basis-1/3 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black ">
+                    <div class="flex justify-between"><span
+                            class=" border w-8 h-8 flex items-center justify-center rounded-full">03</span> <span
+                            class="transition ease-in-out duration-150 text-3xl group-hover:-rotate-45 group-hover:text-orange-400"><i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <h1 class="font-bold my-3 text-4xl text-[var(--light-color)] dark:text-[var(--adark-color)]">Web
+                        Design</h1>
+                    <p class="text-xl text-white dark:text-[var(--dark-color)]">Build fast, responsive, and
+                        SEO-friendly websites tailored to your business needs.</p>
+                </div>
+                <div id="col"
+                    class="group basis-2/3 flex flex-col gap-3 bg-[var(--main-color)] dark:bg-white p-10 rounded-lg text-white dark:text-black ">
+                    <div class="flex justify-between"><span
+                            class=" border w-8 h-8 flex items-center justify-center rounded-full">04</span> <span
+                            class="transition ease-in-out duration-150 text-3xl group-hover:-rotate-45 group-hover:text-orange-400"><i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <h1 class="font-bold my-3 text-4xl text-[var(--light-color)] dark:text-[var(--adark-color)]">App
+                        Development</h1>
+                    <p class="text-xl text-white dark:text-[var(--dark-color)] mr-[50px]">Develop high-performance
+                        mobile apps for Android & iOS with smooth user experience and modern design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="w-full py-20 bg-black dark:bg-[var(--alight-color)]">
+        <div class="container-full">
+            <div id="testimonials" class="py-10">
+                <h1
+                    class="text-4xl text-center md:text-left font-bold text-[var(--light-color)] dark:text-[var(--dark-color)]">
+                    Testimonials</h1>
+            </div>
+            <div class=" flex flex-col md:flex-row gap-3">
+                <div id="col"
+                    class="group flex flex-col justify-center items-center basis-1/3 bg-[var(--main-color)] dark:bg-white p-5 m-3 rounded-lg text-white dark:text-black ">
+                    <img src="/images/alok.jpg" alt="" class="w-20 h-20 rounded-full" />
+
+                    <p class="text-lg my-3 text-white dark:text-[var(--dark-color)]">"Working with Intime Webs
+                        was a fantastic experience! They created a stunning and user-friendly e-commerce website for
+                        my business. The entire process was smooth, and the team was highly responsive to my needs."</p>
+
+                    <h1 class="font-bold text-left text-xl text-[var(--light-color)] dark:text-[var(--adark-color)]">
+                        Rahul Sharma,<span class="font-light text-white dark:text-[var(--adark-color)]"> Founder of XYZ
+                            Store</span>
+                    </h1>
+                </div>
+                <div id="col"
+                    class="group flex flex-col justify-center items-center basis-1/3 bg-[var(--main-color)] dark:bg-white p-5 m-3 rounded-lg text-white dark:text-black">
+                    <img src="/images/alok.jpg" alt="" class="w-20 h-20 rounded-full" />
+
+                    <p class="text-lg text-white dark:text-[var(--dark-color)] my-3">"Alok and his team did an
+                        outstanding job designing our corporate website. The site looks professional, runs smoothly,
+                        and has helped us improve our brand presence online. Thanks to Intime Webs for their great
+                        service!"</p>
+                    <h1 class="font-bold text-left text-xl text-[var(--light-color)] dark:text-[var(--adark-color)]">
+                        Sneha Mehta,<span class="font-light text-white dark:text-[var(--adark-color)]"> CEO of ABC
+                            Corp</span>
+                    </h1>
+                </div>
+                <div id="col"
+                    class="group flex flex-col justify-center items-center basis-1/3 bg-[var(--main-color)] dark:bg-white p-5 m-3 rounded-lg text-white dark:text-black">
+                    <img src="/images/alok.jpg" alt="" class="w-20 h-20 rounded-full" />
+
+                    <p class="text-lg text-white dark:text-[var(--dark-color)] my-3">"I was struggling to get
+                        traffic on my website, but after getting SEO and Facebook marketing services from Intime
+                        Webs, my sales increased significantly. Their expertise is truly impressive!"</p>
+                    <h1 class="font-bold text-left text-xl text-[var(--light-color)] dark:text-[var(--adark-color)]">
+                        Vikram Singh,<span class="font-light text-white dark:text-[var(--adark-color)]"> Owner of DEF
+                            Enterprises</span>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- contact info -->
+    <section class="w-full min-h-screen bg-black dark:bg-[var(--alight-color)]">
+        <div class="container-full">
+            <div id="contact" class="py-10">
+                <h1
+                    class="text-4xl text-center md:text-left font-bold text-[var(--light-color)] dark:text-[var(--dark-color)]">
+                    Contact Info</h1>
+            </div>
+            <div class=" flex flex-col md:flex-row gap-6">
+                <div id="col"
+                    class="group flex flex-col justify-center items-center basis-1/2 bg-[var(--main-color)] dark:bg-white p-5 rounded-lg text-white dark:text-black ">
+                    <form action="" class="w-[80%]">
+                        <span class="text-3xl text-[var(--light-color)] dark:text-[var(--adark-color)] ms-2"> Feel free
+                            to contact Me</span>
+                        <div class="flex flex-col gap-1 my-4">
+                            <label for="name" class="text-xl text-white dark:text-[var(--adark-color)] ms-2">Full Name
+                                :</label>
+                            <input type="text" id="name" placeholder="Enter your name here"
+                                class="border border-white dark:border-black bg-transparent rounded-lg px-5 py-1 text-xl">
+                        </div>
+                        <div class="flex flex-col gap-1 my-4">
+                            <label for="phone" class="text-xl text-white dark:text-[var(--adark-color)] ms-2">Phone No
+                                :</label>
+                            <input type="text" id="phone" placeholder="Enter your name here"
+                                class="border border-white dark:border-black bg-transparent rounded-lg px-5 py-1 text-xl">
+                        </div>
+                        <div class="flex flex-col gap-1 my-4">
+                            <label for="email" class="text-xl text-white dark:text-[var(--adark-color)] ms-2">Email
+                                :</label>
+                            <input type="text" id="email" placeholder="Enter your name here"
+                                class="border border-white dark:border-black bg-transparent rounded-lg px-5 py-1 text-xl">
+                        </div>
+                        <div class="flex flex-col gap-1 my-4">
+                            <label for="messege" class="text-xl text-white dark:text-[var(--adark-color)] ms-2">Messege
+                                :</label>
+                            <input type="textarea" id="messege" placeholder="Enter your name here"
+                                class="border border-white dark:border-black bg-transparent rounded-lg px-5 py-1 text-xl">
+                        </div>
+                        <div class="w-40 flex flex-col gap-1 my-7">
+                            <input type="submit" value="Submit"
+                                class="border border-white dark:border-black bg-white dark:bg-black text-[var(--adark-color)] dark:text-white rounded-full px-5 py-1 text-xl">
+                        </div>
+
+                    </form>
+
+                </div>
+                <div id="col"
+                    class="group flex flex-col justify-center items-center basis-1/2 bg-[var(--main-color)] dark:bg-white p-5 rounded-lg text-white dark:text-black ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6197.320741265756!2d88.39589814999886!3d22.543584647925787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal%2C%20India!5e0!3m2!1sen!2sbd!4v1739276606288!5m2!1sen!2sbd"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full py-5 bg-black outline-0 dark:bg-[var(--alight-color)]">
+        <div>
+            <p class="text-xl text-white text-center dark:text-black">Copyright © 2025 Alok Biswas</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
